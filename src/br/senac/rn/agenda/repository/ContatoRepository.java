@@ -7,8 +7,11 @@ import java.util.List; // é um collection
 
 public class ContatoRepository {
 
-    private static List<Contato> contatos = new ArrayList<>();      //static pode mudar;
+    private static List<Contato> contatos = new ArrayList<>();
 
+    //static pode mudar;
+    //atributos e metodos da classe por isso é estatico;
+    //não quero começar uma nova lista toda vez que adcionar, criamos ele como static para evitar isso;
 
 
 }
