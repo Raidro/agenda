@@ -12,6 +12,15 @@ public class Contato {
     private String nome;
     private String fone;
 
+    public Contato() {
+    }
+
+    public Contato(Long id, String nome, String fone) {
+        this.id = id;
+        this.nome = nome;
+        this.fone = fone;
+    }
+
     public Long getId() {
         return id;
     }
