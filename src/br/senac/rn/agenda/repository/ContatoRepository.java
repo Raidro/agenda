@@ -13,5 +13,13 @@ public class ContatoRepository {
     //atributos e metodos da classe por isso é estatico;
     //não quero começar uma nova lista toda vez que adcionar, criamos ele como static para evitar isso;
 
+    public void salva(Contato contato) {
+        contatos.add(contato);
+    }
+
+    public List<Contato> buscaTodos() {
+        return contatos;
+    }
+
 
 }
