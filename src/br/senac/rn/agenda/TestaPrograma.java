@@ -10,6 +10,7 @@ public class TestaPrograma {
 
     public static void main(String[] args) {
 
+        //não se re-organiza os id's
 
         ContatoRepository bancoDeDados = new ContatoRepository(); // vai acessar o banco de dados;
 
@@ -29,9 +30,13 @@ public class TestaPrograma {
 
         List<Contato> contatos = bancoDeDados.buscaTodos();
 
-        for (Contato contato : contatos) {
-            System.out.println(contato.getId() + " - " + contato.getNome());
-        }
+//        for (Contato contato : contatos) {
+//            System.out.println(contato.getId() + " - " + contato.getNome());
+//        }
+
+        Contato contatoBuscado = bancoDeDados.buscaPeloId(2L);
+        System.out.println(contatoBuscado.getNome());
+
 
     }
 
