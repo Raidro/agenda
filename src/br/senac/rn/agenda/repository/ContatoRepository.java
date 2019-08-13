@@ -19,9 +19,11 @@ public class ContatoRepository {
         contato.setId(id);
 
     }
+    //não se deve entregar o original, é sempre bom ter uma copia
 
     public List<Contato> buscaTodos() {
-        return contatos;
+        List<Contato> copiaContatos = new ArrayList<Contato>(contatos);
+        return copiaContatos;
     }
 
 
