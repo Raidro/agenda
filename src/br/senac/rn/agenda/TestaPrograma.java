@@ -34,8 +34,11 @@ public class TestaPrograma {
 //            System.out.println(contato.getId() + " - " + contato.getNome());
 //        }
 
-        Contato contatoBuscado = bancoDeDados.buscaPeloId(2L);
-        System.out.println(contatoBuscado.getNome());
+//        Contato contatoBuscado = bancoDeDados.buscaPeloId(2L);
+//        System.out.println(contatoBuscado.getNome());
+
+        Contato contatoBuscadoPorNome = bancoDeDados.buscaPeloNome("Michele Silva");
+        System.out.println(contatoBuscadoPorNome.getNome());
 
 
     }

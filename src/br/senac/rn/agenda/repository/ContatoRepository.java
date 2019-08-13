@@ -36,9 +36,17 @@ public class ContatoRepository {
         return null;
     }
 
+    public Contato buscaPeloNome(String nome) {
 
+        for (Contato contato : contatos) {
+            if (contato.getNome().toLowerCase().equals(nome.toLowerCase())) {
+                return contato;
+            }
 
+        }
+        return null;
 
+    }
 
 
 }
