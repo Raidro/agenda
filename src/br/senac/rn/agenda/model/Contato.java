@@ -15,8 +15,8 @@ public class Contato {
     public Contato() {
     }
 
-    public Contato(Long id, String nome, String fone) {
-        this.id = id;
+    public Contato(String nome, String fone) {
+
         this.nome = nome;
         this.fone = fone;
     }
