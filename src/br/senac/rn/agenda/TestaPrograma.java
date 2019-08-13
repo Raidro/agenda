@@ -30,16 +30,25 @@ public class TestaPrograma {
 
         List<Contato> contatos = bancoDeDados.buscaTodos();
 
-//        for (Contato contato : contatos) {
-//            System.out.println(contato.getId() + " - " + contato.getNome());
-//        }
+        for (Contato contato : bancoDeDados.buscaTodos()) {
+            System.out.println(contato.getId() + " - " + contato.getNome());
+        }
 
 //        Contato contatoBuscado = bancoDeDados.buscaPeloId(2L);
 //        System.out.println(contatoBuscado.getNome());
 
-        Contato contatoBuscadoPorNome = bancoDeDados.buscaPeloNome("Michele Silva");
-        System.out.println(contatoBuscadoPorNome.getNome());
+//        Contato contatoBuscadoPorNome = bancoDeDados.buscaPeloNome("Michele Silva");
+//        System.out.println(contatoBuscadoPorNome.getNome());
 
+
+        Contato jota1 = new Contato("Jota Lopes", "9999-8888");
+        bancoDeDados.remove(jota1);
+
+        System.out.println("============================================");
+
+        for (Contato contato : bancoDeDados.buscaTodos()) {
+            System.out.println(contato.getId() + " - " + contato.getNome());
+        }
 
     }
 
