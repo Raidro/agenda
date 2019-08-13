@@ -48,5 +48,9 @@ public class ContatoRepository {
 
     }
 
+    public void remove(Contato contato) {
+        contatos.remove(contato);
+
+    }
 
 }
