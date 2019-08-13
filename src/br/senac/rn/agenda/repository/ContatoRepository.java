@@ -26,5 +26,19 @@ public class ContatoRepository {
         return copiaContatos;
     }
 
+    public Contato buscaPeloId(Long id) {
+
+        for (Contato contato : contatos) {
+            if (contato.getId().equals(id)) {
+                return contato;
+            }
+        }
+        return null;
+    }
+
+
+
+
+
 
 }
