@@ -53,4 +53,17 @@ public class ContatoRepository {
 
     }
 
+    public void edita(Contato contato) {
+
+        for (Contato c : contatos) { // o "c" é o mesmo que contato, so abreviamos
+            if (c.getId().equals(contato.getId())) {
+                int indice = contatos.indexOf(c);
+                contatos.set(indice, contato);
+            }
+
+        }
+
+
+    }
+
 }
