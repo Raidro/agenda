@@ -3,6 +3,8 @@ package br.senac.rn.agenda;
 import br.senac.rn.agenda.model.Contato;
 import br.senac.rn.agenda.repository.ContatoRepository;
 
+import java.util.List;
+
 public class TestaPrograma {
 
 
@@ -22,6 +24,14 @@ public class TestaPrograma {
         bancoDeDados.salva(michele);
 
         bancoDeDados.salva(felipe);
+
+        // fazendo um "for each"
+
+        List<Contato> contatos = bancoDeDados.buscaTodos();
+
+        for (Contato contato : contatos) {
+            System.out.println(contato.getNome());
+        }
 
     }
 
