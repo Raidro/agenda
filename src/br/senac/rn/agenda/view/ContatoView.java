@@ -12,20 +12,22 @@ public class ContatoView {
 
     public static void main(String[] args) {
 
-        Long escolha = 1L;
-
+        Integer escolha = -1;
 
         do {
             ContatoView.getMenu();
-            escolha = entrada.nextLong();
+            escolha = entrada.nextInt();
 
 
-            switch (Integer.parseInt(escolha.toString())) {
+            switch (escolha) {
                 case 1:
                     ContatoView.cadastrar();
                     break;
                 case 2:
                     ContatoView.listarTodos();
+                    break;
+                case 3:
+
                     break;
             }
 
@@ -37,7 +39,12 @@ public class ContatoView {
 
     private static void listarTodos() {
         for (Contato contato : bancoDeDados.buscaTodos()) {
-            System.out.println(contato.getId() + " - Nome: " + contato.getNome() + " - Fone: " + contato.getFone());
+            String id = contato.getId().toString();
+            String nome = contato.getNome();
+            String fone = contato.getFone();
+
+            String saida = id + " - " + nome + " - " + fone;
+            System.out.println(saida);
         }
     }
 
