@@ -1,16 +1,22 @@
 package br.senac.rn.agenda.view;
 
+import java.util.Scanner;
+
 public class ContatoView {
+
+    private static Scanner entrada = new Scanner(System.in);
+
 
     public static void main(String[] args) {
 
+        ContatoView.getMenu();
+        Long escolha = entrada.nextLong();
+        System.out.println(escolha);
 
-
-        System.out.println(getMenu());
 
     }
 
-    private static String getMenu() {
+    private static void getMenu() {
         String menu = "";
         menu += " ============================  \n";
         menu += "1 - Cadastrar Novo Contato     \n";
@@ -18,7 +24,7 @@ public class ContatoView {
         menu += "3 - Buscar Contato             \n";
         menu += " ============================  \n";
         menu += "Opção: ";
-        return menu;
+        System.out.print(menu);
     }
 
 }
