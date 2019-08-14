@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="95675a68-7d62-41c0-9654-737ab0a40dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/repository/ContatoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/repository/ContatoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/view/ContatoView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/view/ContatoView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/senac/rn/agenda/view/ContatoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/senac/rn/agenda/view/ContatoView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,6 +27,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -38,7 +41,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ContatoView">
+    <configuration name="ContatoView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.senac.rn.agenda.view.ContatoView" />
+      <module name="agenda-v1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.senac.rn.agenda.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestaPrograma" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.senac.rn.agenda.TestaPrograma" />
       <module name="agenda-v1" />
@@ -54,6 +70,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ContatoView" />
         <item itemvalue="Application.TestaPrograma" />
       </list>
     </recent_temporary>
