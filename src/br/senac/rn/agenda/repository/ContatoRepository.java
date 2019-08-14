@@ -7,6 +7,7 @@ import java.util.List; // é um collection
 
 public class ContatoRepository {
 
+    private static Long id = 0L;
     private static List<Contato> contatos = new ArrayList<>();
 
     //static pode mudar;
@@ -14,9 +15,10 @@ public class ContatoRepository {
     //não quero começar uma nova lista toda vez que adcionar, criamos ele como static para evitar isso;
 
     public void salva(Contato contato) {
-        contatos.add(contato);
-        Long id = Long.valueOf(contatos.size());
+        id++; // é preciso que o id seja incrementado antes do set id
         contato.setId(id);
+        contatos.add(contato);
+
 
     }
     //não se deve entregar o original, é sempre bom ter uma copia

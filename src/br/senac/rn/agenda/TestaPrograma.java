@@ -41,8 +41,17 @@ public class TestaPrograma {
 //        System.out.println(contatoBuscadoPorNome.getNome());
 
 
-        Contato jota1 = new Contato("Jota Lopes", "9999-8888");
-        bancoDeDados.remove(jota1);
+        Contato jotaLopes = new Contato("Jota L.", "9999-8888");
+
+        jotaLopes.setId(1L);//é necessario que criemos o id igual ao id existente
+
+        bancoDeDados.edita(jotaLopes);
+
+        bancoDeDados.remove(jotaLopes);
+
+        Contato caio = new Contato("Caio Silva","777-6565");
+        bancoDeDados.salva(caio);
+
 
         System.out.println("============================================");
 
