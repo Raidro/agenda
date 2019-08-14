@@ -9,10 +9,12 @@ public class ContatoView {
 
     public static void main(String[] args) {
 
-        ContatoView.getMenu();
-        Long escolha = entrada.nextLong();
-        System.out.println(escolha);
+        Long escolha = 1L;
 
+        do {
+            ContatoView.getMenu();
+            escolha = entrada.nextLong();
+        } while (escolha != 0);
 
     }
 
