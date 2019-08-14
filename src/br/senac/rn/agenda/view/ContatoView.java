@@ -18,7 +18,6 @@ public class ContatoView {
             ContatoView.getMenu();
             escolha = entrada.nextInt();
 
-
             switch (escolha) {
                 case 1:
                     ContatoView.cadastrar();
@@ -27,13 +26,24 @@ public class ContatoView {
                     ContatoView.listarTodos();
                     break;
                 case 3:
-
+                    ContatoView.buscarPeloNome();
                     break;
             }
 
-
         } while (escolha != 0);
 
+    }
+
+    private static void buscarPeloNome() {
+
+        String nome;
+        System.out.print("Digite o nome do contato: ");
+        nome = entrada.next();
+        Contato contatoBuscado = bancoDeDados.buscaPeloNome(nome);
+        String id = contatoBuscado.getId().toString();
+        String nomeBuscado = contatoBuscado.getNome();
+        String fone = contatoBuscado.getFone();
+        System.out.println(id + " - " + nomeBuscado + " - " + fone);
 
     }
 
@@ -42,7 +52,6 @@ public class ContatoView {
             String id = contato.getId().toString();
             String nome = contato.getNome();
             String fone = contato.getFone();
-
             String saida = id + " - " + nome + " - " + fone;
             System.out.println(saida);
         }
