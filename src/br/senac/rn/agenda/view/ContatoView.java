@@ -46,8 +46,8 @@ public class ContatoView {
         String nome;
         System.out.print("Digite o nome do contato a ser Excluido: ");
         nome = entrada.next();
-//        bancoDeDados.remove(nome);
-
+        Contato contatoBuscadoParaExcluir = bancoDeDados.buscaPeloNome(nome);
+        bancoDeDados.remove(contatoBuscadoParaExcluir);
 
     }
 
@@ -70,10 +70,16 @@ public class ContatoView {
         System.out.print("Digite o nome do contato: ");
         nome = entrada.next();
         Contato contatoBuscado = bancoDeDados.buscaPeloNome(nome);
-        String id = contatoBuscado.getId().toString();
-        String nomeBuscado = contatoBuscado.getNome();
-        String fone = contatoBuscado.getFone();
-        System.out.println(id + " - " + nomeBuscado + " - " + fone);
+
+        if (contatoBuscado == null) {
+            System.out.println("Contato Inexistente!!");
+
+        } else {
+            String id = contatoBuscado.getId().toString();
+            String nomeBuscado = contatoBuscado.getNome();
+            String fone = contatoBuscado.getFone();
+            System.out.println(id + " - " + nomeBuscado + " - " + fone);
+        }
 
     }
 
