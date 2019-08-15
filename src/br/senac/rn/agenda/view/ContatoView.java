@@ -2,6 +2,7 @@ package br.senac.rn.agenda.view;
 
 import br.senac.rn.agenda.model.Contato;
 import br.senac.rn.agenda.repository.ContatoRepository;
+import com.sun.xml.internal.ws.api.ha.StickyFeature;
 
 import java.util.Scanner;
 
@@ -28,9 +29,38 @@ public class ContatoView {
                 case 3:
                     ContatoView.buscarPeloNome();
                     break;
+                case 4:
+                    ContatoView.editarContato();
+                    break;
+                case 5:
+                    ContatoView.excluirContato();
+                    break;
             }
 
         } while (escolha != 0);
+
+    }
+
+    private static void excluirContato() {
+
+        String nome;
+        System.out.print("Digite o nome do contato a ser Editado: ");
+        nome = entrada.next();
+//        bancoDeDados.remove(nome);
+
+
+    }
+
+    private static void editarContato() {
+
+        String nome;
+        String fone;
+        System.out.print("Digite o nome do contato a ser Editado: ");
+        nome = entrada.next();
+        System.out.print("Digite o fone do contato a ser Editado: ");
+        fone = entrada.next();
+        Contato contatoNovo = new Contato(nome, fone);
+        bancoDeDados.edita(contatoNovo);
 
     }
 
@@ -73,7 +103,9 @@ public class ContatoView {
         menu += " ============================  \n";
         menu += "1 - Cadastrar Novo Contato     \n";
         menu += "2 - Listar todos os Contatos   \n";
-        menu += "3 - Buscar Contato             \n";
+        menu += "3 - Buscar Contato pelo Nome   \n";
+        menu += "4 - Editar um contato          \n";
+        menu += "5 - Excluir Contato            \n";
         menu += "0 - SAIR                       \n";
         menu += " ============================  \n";
         menu += "Opção: ";
