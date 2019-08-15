@@ -56,20 +56,38 @@ public class ContatoView {
         String nome;
         String nomeEditado;
         String foneEditado;
+        String respostaNome;
+        String respostaFone;
 
         System.out.print("Digite o Contato a ser Editado: ");
         nome = entrada.next();
         Contato contatoBuscadoParaEditar = bancoDeDados.buscaPeloNome(nome);
 
-        System.out.print("Digite o novo nome do contato: ");
-        nomeEditado = entrada.next();
-        System.out.print("Digite o novo fone do contato: ");
-        foneEditado = entrada.next();
+        if (contatoBuscadoParaEditar == null) {
+            System.out.println("Contato Inexistente!!");
 
-        contatoBuscadoParaEditar.setNome(nomeEditado);
-        contatoBuscadoParaEditar.setFone(foneEditado);
+        } else {
 
-        bancoDeDados.edita(contatoBuscadoParaEditar);
+            System.out.println("Deseja alterar o nome? (S ou N)");
+            respostaNome = entrada.next().toLowerCase().trim();
+
+            if (respostaNome.equals("s")) {
+                System.out.print("Digite o novo nome do contato: ");
+                nomeEditado = entrada.next();
+                contatoBuscadoParaEditar.setNome(nomeEditado);
+            }
+
+            System.out.println("Deseja alterar o fone? (S ou N)");
+            respostaFone = entrada.next().toLowerCase().trim();
+
+            if (respostaFone.equals("s")) {
+                System.out.print("Digite o novo fone do contato: ");
+                foneEditado = entrada.next();
+                contatoBuscadoParaEditar.setFone(foneEditado);
+            }
+
+            bancoDeDados.edita(contatoBuscadoParaEditar);
+        }
 
     }
 
