@@ -44,7 +44,7 @@ public class ContatoView {
     private static void excluirContato() {
 
         String nome;
-        System.out.print("Digite o nome do contato a ser Editado: ");
+        System.out.print("Digite o nome do contato a ser Excluido: ");
         nome = entrada.next();
 //        bancoDeDados.remove(nome);
 
