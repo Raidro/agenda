@@ -2,7 +2,7 @@ package br.senac.rn.agenda.view;
 
 import br.senac.rn.agenda.model.Contato;
 import br.senac.rn.agenda.repository.ContatoRepository;
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
+
 
 import java.util.Scanner;
 
@@ -54,13 +54,22 @@ public class ContatoView {
     private static void editarContato() {
 
         String nome;
-        String fone;
-        System.out.print("Digite o nome do contato a ser Editado: ");
+        String nomeEditado;
+        String foneEditado;
+
+        System.out.print("Digite o Contato a ser Editado: ");
         nome = entrada.next();
-        System.out.print("Digite o fone do contato a ser Editado: ");
-        fone = entrada.next();
-        Contato contatoNovo = new Contato(nome, fone);
-        bancoDeDados.edita(contatoNovo);
+        Contato contatoBuscadoParaEditar = bancoDeDados.buscaPeloNome(nome);
+
+        System.out.print("Digite o novo nome do contato: ");
+        nomeEditado = entrada.next();
+        System.out.print("Digite o novo fone do contato: ");
+        foneEditado = entrada.next();
+
+        contatoBuscadoParaEditar.setNome(nomeEditado);
+        contatoBuscadoParaEditar.setFone(foneEditado);
+
+        bancoDeDados.edita(contatoBuscadoParaEditar);
 
     }
 

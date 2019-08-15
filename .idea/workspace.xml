@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="95675a68-7d62-41c0-9654-737ab0a40dcd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/TestaPrograma.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/TestaPrograma.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/view/ContatoView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/agenda-v1/br/senac/rn/agenda/view/ContatoView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/senac/rn/agenda/view/ContatoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/senac/rn/agenda/view/ContatoView.java" afterDir="false" />
     </list>
